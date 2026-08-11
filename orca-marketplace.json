@@ -1,0 +1,16 @@
+{
+  "name": "Русский язык для Orca",
+  "owner": "turvodnik",
+  "plugins": [
+    {
+      "id": "pifagor.russian",
+      "source": {
+        "kind": "git",
+        "url": "https://github.com/turvodnik/orca-russian.git",
+        "ref": "v1.0.0"
+      },
+      "description": "Русский перевод интерфейса Orca — 12 064 строки, весь интерфейс.",
+      "categories": ["languages"]
+    }
+  ]
+}
