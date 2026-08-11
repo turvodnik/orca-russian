@@ -3,7 +3,7 @@
   "id": "russian",
   "publisher": "pifagor",
   "name": "Русский",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "description": "Русский перевод интерфейса Orca.",
   "engines": {
     "orca": ">=1.4.0"

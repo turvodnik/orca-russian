@@ -7,7 +7,7 @@
       "source": {
         "kind": "git",
         "url": "https://github.com/turvodnik/orca-russian.git",
-        "ref": "v1.1.0"
+        "ref": "v1.2.0"
       },
       "description": "Русский перевод интерфейса Orca — 12 294 строки, весь интерфейс.",
       "categories": [
