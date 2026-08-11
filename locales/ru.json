@@ -110,7 +110,7 @@
       "port": "Порт",
       "pr": "PR"
     },
-    "renderCapOverflow": "ещё {{value0}} — продолжайте ввод или добавьте фильтр",
+    "renderCapOverflow": "Ещё {{value0}} — прокрутите или продолжайте вводить",
     "filter": {
       "emptyTitle": "Под фильтр ничего не подходит",
       "emptySubtitle": "Снимите фильтр выше или расширьте его на другие host и проекты.",
@@ -369,6 +369,15 @@
             "runtimeHostUnreachableNamed": "Не удаётся связаться с {{hostName}}",
             "runtimeHostUnreachable": "Не удаётся связаться с сервером Orca",
             "tryAgain": "Повторить"
+          }
+        },
+        "terminal": {
+          "quick": {
+            "command": {
+              "hosts": {
+                "5b7d781d67": "Не удалось сохранить быструю команду"
+              }
+            }
           }
         }
       }
@@ -881,7 +890,11 @@
         "linearDescription": "Как Linear работает в Orca: настройка, skill для agent и примеры prompt.",
         "pluginsTitle": "Plugins",
         "pluginsDescription": "Установка и управление экспериментальными plugin для Orca.",
-        "tasksDescription": "Подключите источники, установите skill для Linear и выберите, что показывать в задачах."
+        "tasksDescription": "Подключите источники, установите skill для Linear и выберите, что показывать в задачах.",
+        "artifactsTitle": "Artifacts",
+        "artifactsDescription": "Делитесь HTML- и Markdown-файлами с командой и управляйте публичными ссылками.",
+        "automationsTitle": "Automations",
+        "automationsDescription": "Планируйте работу agent и решайте, показывать ли Automations в боковой панели."
       },
       "useAppMenuPaste": {
         "pasteTooLarge": "Слишком большая вставка."
@@ -2806,7 +2819,8 @@
             "c2f0b72b8d": "Добавить",
             "925f49f210": "Развернуть панель",
             "df766809e0": "Свернуть панель",
-            "cff67afad1": "Скопировать контекст"
+            "cff67afad1": "Скопировать контекст",
+            "15dd899676": "Добавить в {{value0}}…"
           },
           "TerminalErrorToast": {
             "e4aa243f8c": "Перезапустить daemon",
@@ -2947,6 +2961,10 @@
             "retryingBody": "Orca будет пытаться подключиться до одной минуты. Терминал возобновит работу, если соединение восстановится.",
             "disconnectedBody": "Автоматические попытки остановлены. Переподключитесь, чтобы продолжить сеанс терминала.",
             "reconnectButton": "Переподключиться"
+          },
+          "TerminalQuickCommandsSubmenu": {
+            "3ccc7981bb": "Host недоступен",
+            "54f29b7c0d": "Загрузка host…"
           }
         }
       },
@@ -3166,6 +3184,14 @@
           },
           "TerminalTabLeadingIcon": {
             "7ab2964bea": "Agent завершил работу (непрочитано)"
+          },
+          "TabBarQuickCommandAddActions": {
+            "45a2f36d51": "Команда",
+            "b856c833ae": "Команда на {{value0}}"
+          },
+          "TabBarQuickCommandHostLoadStatus": {
+            "82e294f3ca": "Host недоступен",
+            "7c129b08ff": "Загрузка host…"
           }
         }
       },
@@ -3279,6 +3305,7 @@
             "runtime_reconnecting": "Переподключение",
             "runtime_last_close_reason": "Закрыто: {{value0}}",
             "runtime_reconnect_attempt": "Попытка {{value0}}",
+            "runtime_workspace_window_closed": "Окно workspace закрыто",
             "connectedHostCount_one": "{{count}} host",
             "connectedHostCount_other": "{{count}} host",
             "connecting": "Подключение…",
@@ -4426,7 +4453,8 @@
           "196c1b5362": "Открыть задачи GitLab",
           "0ccba862b8": "Открыть задачи GitHub",
           "fee535205b": "Задачи",
-          "d599269755": "Скрыть из боковой панели"
+          "d599269755": "Скрыть из боковой панели",
+          "artifacts": "Artifacts"
         },
         "SidebarRepositoryFilterSection": {
           "d3a9c4cea1": "Очистить",
@@ -6146,7 +6174,10 @@
           "5567191a6e": "Обзор",
           "0e9fc0eadc": "Каталог workspace",
           "e2955d9ccb": "Настройте, где создаются новые workspace.",
-          "7511097c5d": "Workspace"
+          "7511097c5d": "Workspace",
+          "31e300af1c": "Спрашивать перед удалением artifact",
+          "fb29a73a17": "Показывать подтверждение перед удалением artifact и отключением его публичной ссылки.",
+          "bf46474e33": "Показывать подтверждение перед удалением artifact. Все, у кого есть публичная ссылка, потеряют доступ."
         },
         "GhosttyImportModal": {
           "9d3e56ca36": "Применить изменения",
@@ -6669,7 +6700,13 @@
           "38d61927e6": "Быстрых команд ещё нет.",
           "44923dd982": "разрушительное",
           "ec1ed99e70": "Удалить",
-          "d1d0976320": "Нет"
+          "d1d0976320": "Нет",
+          "89f7e57fcc": "Сохранено на",
+          "d59bd333c3": "Обновите этот Orca server, чтобы управлять его быстрыми командами.",
+          "f2bf411640": "Не удалось загрузить команды с этого host.",
+          "7ecfee5b8e": "Повторить",
+          "601d6af51f": "Загрузка команд…",
+          "923ba89646": "Не удалось обновить команды с этого host. Показаны загруженные ранее."
         },
         "RecentTabOrderControl": {
           "3b17c81ede": "Порядок вкладок",
@@ -6860,7 +6897,9 @@
           "projectRuntimeDescription": "Выберите, где запускается проект — на Windows или WSL.",
           "hostStateDisconnected": "Отключено",
           "hostStateUnknown": "Неизвестно",
-          "nestedHostLabel": "{{value0}} через {{value1}}"
+          "nestedHostLabel": "{{value0}} через {{value1}}",
+          "hostStateWorkspaceWindowClosed": "Окно workspace закрыто",
+          "hostWorkspaceWindowClosedHelp": "Server доступен, но окно Orca на нём закрыто. Откройте Orca на {{value0}}, чтобы использовать эту настройку."
         },
         "RepositorySourceControlAiActionRows": {
           "548a6e1281": "Шаблон команды",
@@ -9546,7 +9585,9 @@
           "hostOverride": "Переопределение на host",
           "workspaceDirectory": "Значение клиента по умолчанию наследуется, пока host не потребует свою папку worktree.",
           "providerHost": "Host провайдера",
-          "providerAccounts": "Учётные данные и проверки аккаунта принадлежат локальному клиенту или выбранному удалённому серверу, который владеет интеграцией провайдера."
+          "providerAccounts": "Учётные данные и проверки аккаунта принадлежат локальному клиенту или выбранному удалённому серверу, который владеет интеграцией провайдера.",
+          "hostCollectionProjectScopes": "Коллекция host + области проекта",
+          "terminalQuickCommandHostCollections": "Команды сохраняются на выбранном host Orca и действуют глобально или в рамках настройки проекта. Команды с этого устройства остаются доступны и в удалённых workspace."
         },
         "RepositoryForkSyncSection": {
           "defaultBranch": "branch по умолчанию",
@@ -10161,6 +10202,77 @@
           "body": "Daemon терминала был запущен установкой Orca, которой больше не существует, поэтому macOS не может связать его команды с Orca — разрешения Accessibility и Automation молча игнорируются (osascript завершается с ошибкой -25211). Перезапуск daemon решает проблему; активные сеансы терминала при этом закроются.",
           "openManageSessions": "Открыть управление сеансами",
           "title": "Разрешения macOS не доходят до терминалов"
+        },
+        "artifacts": {
+          "enable": "Включить Artifacts",
+          "enableDescription": "Добавить Artifacts в боковую панель, чтобы открывать и удалять опубликованные файлы.",
+          "account": "Аккаунт Orca",
+          "connected": "Подключён",
+          "signInRequired": "Чтобы загружать artifact и управлять ими, нужно войти.",
+          "signingIn": "Вход…",
+          "signIn": "Войти в Orca",
+          "title": "Artifacts",
+          "description": "Делитесь HTML- и Markdown-файлами с командой и управляйте публичными ссылками.",
+          "howToTitle": "Как пользоваться Artifacts",
+          "howToDescription": "Публикуйте HTML- или Markdown-файлы как публичные ссылки и отправляйте их команде.",
+          "shareStepTitle": "Выберите файл",
+          "shareStepDescription": "Откройте HTML- или Markdown-файл и выберите «Поделиться как artifact» — или попросите agent.",
+          "linkStepTitle": "Скопируйте публичную ссылку",
+          "linkStepDescription": "После публикации скопируйте ссылку и отправьте команде.",
+          "manageStepTitle": "Управляйте в Orca",
+          "manageStepDescription": "Откройте Artifacts в боковой панели, чтобы посмотреть или удалить ссылки.",
+          "openArtifacts": "Открыть Artifacts",
+          "openArtifactsDescription": "Просмотр и удаление ссылок, опубликованных через ваш аккаунт.",
+          "showButton": "Показывать кнопку Artifacts",
+          "showButtonDescription": "Показывать ярлык Artifacts в боковой панели.",
+          "openArtifactsDescriptionV2": "Просмотр, копирование и управление ссылками из вашего аккаунта.",
+          "signInTitle": "Войдите, чтобы делиться artifact",
+          "signInDescription": "Используйте аккаунт Orca, чтобы загружать artifact и управлять их публичными ссылками.",
+          "signInAgain": "Войти снова",
+          "enableStepTitle": "Включите публикацию artifact",
+          "enableStepWebDescription": "Откройте Настройки → Artifacts в приложении Orca на host-устройстве и включите публикацию.",
+          "enableStepDescription": "Включите «Разрешить публичные ссылки на artifact» выше.",
+          "allowPublishing": "Разрешить публичные ссылки на artifact",
+          "allowPublishingWebDescription": "Только в приложении. Чтобы изменить, откройте Настройки → Artifacts на host-устройстве.",
+          "allowPublishingDescription": "Публиковать HTML- и Markdown-файлы как ссылки, открытые всем, у кого есть URL. Созданные ссылки работают, пока вы не удалите их в Artifacts.",
+          "howToDescriptionDisabled": "Включите публикацию artifact выше, чтобы публиковать HTML- и Markdown-файлы как публичные ссылки.",
+          "allowPublishingSearchDescription": "Разрешить Orca публиковать HTML- и Markdown-файлы как публичные ссылки."
+        },
+        "orcaAccount": {
+          "connected": "Подключён",
+          "reconnectRequired": "Сеанс истёк. Войдите снова, чтобы пользоваться облачными функциями.",
+          "unavailable": "Вход в Orca недоступен в этой сборке.",
+          "signedOut": "Войдите, чтобы расширить Orca облачными функциями — Artifacts и Orca Relay.",
+          "checking": "Проверка аккаунта…",
+          "account": "Аккаунт Orca",
+          "signOut": "Выйти",
+          "signingIn": "Вход…",
+          "signInAgain": "Войти снова",
+          "signIn": "Войти в Orca",
+          "title": "Аккаунт Orca",
+          "description": "Делитесь работой мгновенно и подключайтесь к своему компьютеру из Orca Mobile откуда угодно.",
+          "searchDescription": "Вход и выход из аккаунта, который используют Artifacts и Orca Relay.",
+          "benefitsTitle": "Что входит в аккаунт",
+          "artifactsTitle": "Публикация artifact",
+          "artifactsDescription": "Публикуйте HTML- и Markdown-файлы и управляйте всеми ссылками прямо из Orca.",
+          "relayTitle": "Orca Relay",
+          "relayDescription": "Подключайте Orca Mobile к этому компьютеру через мобильную сеть или любой Wi-Fi."
+        },
+        "automations": {
+          "showButton": "Показывать кнопку Automations",
+          "showButtonDescription": "Показывать ярлык Automations в боковой панели.",
+          "howItWorksTitle": "Как работают Automations",
+          "howItWorksDescription": "Запланируйте работу agent один раз — дальше Orca сама запускает её и складывает результаты вместе.",
+          "defineStepTitle": "Опишите работу",
+          "defineStepDescription": "Выберите проект, agent, prompt и расписание.",
+          "runStepTitle": "Orca запускает каждый прогон",
+          "runStepDescription": "Когда подходит время по расписанию, выбранный agent получает свежий workspace.",
+          "reviewStepTitle": "Проверьте результаты",
+          "reviewStepDescription": "Смотрите последние прогоны и продолжайте работу, когда понадобится.",
+          "openAutomations": "Открыть Automations",
+          "openAutomationsDescription": "Создание расписаний и просмотр последних прогонов.",
+          "title": "Automations",
+          "description": "Планируйте работу agent и решайте, показывать ли Automations в боковой панели."
         }
       },
       "right": {
@@ -10339,7 +10451,13 @@
             "b25f63edd7": "open",
             "d2ca293f3d": "Выполняется...",
             "ef064cb7c3": "default",
-            "59b4dccf70": "destructive"
+            "59b4dccf70": "destructive",
+            "9a41a687b7": "В очередь по #{{pr}} · {{count}} PR",
+            "38a1bccb14": "В очередь по #{{pr}} · {{count}} PR",
+            "3de88351c5": "GitHub добавит в очередь merge этот pull request и все pull request ниже него.",
+            "a32fe6dba6": "GitHub выполнит merge этого pull request и всех pull request ниже него в стеке.",
+            "73e0e1819d": "Стек ставится в очередь...",
+            "e555a41d32": "Merge стека..."
           },
           "PortsPanel": {
             "3ea4a02a8f": "Отмена",
@@ -11278,7 +11396,9 @@
             "openSupportedWorkspace": "Откройте workspace, прежде чем возобновлять сеанс.",
             "sessionHostMismatchUnsupported": "Этот сеанс принадлежит другому host. Откройте workspace на том же host, чтобы возобновить его.",
             "localSessionSshWorkspaceUnsupported": "История этого сеанса хранится на этом компьютере, поэтому его нельзя возобновить в SSH workspace. Откройте локальный workspace.",
-            "prepareSessionResumeFailed": "Не удалось подготовить сеанс к возобновлению."
+            "prepareSessionResumeFailed": "Не удалось подготовить сеанс к возобновлению.",
+            "sessionDeleted": "Сеанс удалён",
+            "sessionDeleteFailed": "Не удалось удалить сеанс"
           },
           "AiVaultPanelControls": {
             "scanningSessions": "Сканирование сеансов",
@@ -11410,7 +11530,17 @@
             "jumpToOriginalPane": "Перейти к исходной панели",
             "jumpToWorktree": "Перейти к worktree",
             "subagentCountSingular": "1 subagent",
-            "subagentCountPlural": "{{value0}} subagent"
+            "subagentCountPlural": "{{value0}} subagent",
+            "delete": "Удалить",
+            "deleteReasonNonLocalHost": "Удалять можно только сеансы на этом устройстве.",
+            "deleteReasonSyntheticPath": "Этот сеанс нельзя удалить из Orca.",
+            "deleteReasonUnsupportedAgent": "Сеансы {{value0}} нельзя удалить из Orca.",
+            "deleteReasonSessionLive": "Сеанс ещё выполняется — дождитесь завершения."
+          },
+          "AiVaultSessionDeleteDialog": {
+            "title": "Удалить этот сеанс?",
+            "description": "«{{value0}}» будет удалён. После этого его нельзя будет возобновить и из командной строки {{value1}}.",
+            "confirm": "Удалить"
           },
           "FileExplorerNameFilter": {
             "26fb73c6e3": "Найти файлы",
@@ -11492,6 +11622,34 @@
                   "d9dd7c6687": "Не удалось обновить данные с GitHub. Показан последний известный статус."
                 }
               }
+            },
+            "pr": {
+              "stack": {
+                "confirmation": {
+                  "84f6f5b9eb": "Входят: {{numbers}}. ",
+                  "541984b2eb": "В очередь по #{{pr}}?",
+                  "4809f55cdb": "{{included}}GitHub добавит в очередь merge {{count}} pull request вместе. Очередь сама выберет способ merge и может выполнить их разными группами.",
+                  "be8f2621be": "{{included}}GitHub добавит в очередь merge {{count}} pull request вместе. Очередь сама выберет способ merge и может выполнить их разными группами.",
+                  "92ca033e72": "В очередь {{count}} PR",
+                  "478a527b15": "В очередь {{count}} PR",
+                  "1feef35ca4": "Merge по #{{pr}}?",
+                  "c3e036c99f": "{{included}}GitHub выполнит merge {{count}} pull request одной операцией способом {{method}}. Если merge невозможен, не будет выполнен ни один.",
+                  "369aba4b32": "{{included}}GitHub выполнит merge {{count}} pull request одной операцией способом {{method}}. Если хоть один не сможет, не будет выполнен ни один.",
+                  "493c78f521": "Merge {{count}} PR",
+                  "eb7051d268": "Merge {{count}} PR"
+                },
+                "merge": {
+                  "55ae29b907": "Merge по #{{pr}} · {{count}} PR",
+                  "b8446f6ec2": "Merge по #{{pr}} · {{count}} PR",
+                  "189d0ec614": "#{{pr}} ещё draft.",
+                  "640fb50d9c": "#{{pr}} закрыт.",
+                  "46ffcbda75": "У #{{pr}} конфликты merge.",
+                  "6dabefd63e": "По #{{pr}} запрошены правки.",
+                  "2bb21fc326": "#{{pr}} ещё не одобрен на review.",
+                  "c23faf74df": "#{{pr}} нужно обновить.",
+                  "f561e80968": "#{{pr}} заблокирован."
+                }
+              }
             }
           },
           "PluginPanel": {
@@ -11510,6 +11668,23 @@
             "mayBeSlower": "Может быть медленнее",
             "slowest": "Медленнее всего",
             "unlimited": "Без ограничений"
+          },
+          "GitHubPRStackMap": {
+            "3511405914": "закрыт",
+            "8a9bdc36c0": "merged",
+            "568c647ccd": "draft",
+            "bea9ade223": "конфликты",
+            "838aadf512": "проверки не прошли",
+            "316039b5db": "проверки идут",
+            "4b1e5ee9d3": "запрошены правки",
+            "9a17b5255c": "нужен review",
+            "d3d97cf3f2": "одобрен",
+            "e6cb964305": "открыт",
+            "7737bd66be": "Свернуть стек #{{value0}}",
+            "0c1645ebd0": "Развернуть стек #{{value0}}",
+            "e3ee2daa32": "Стек #{{value0}}",
+            "cb440931b7": "{{value0}} из {{value1}} · {{value2}}",
+            "525259fa17": "Детали стека временно недоступны."
           }
         }
       },
@@ -14129,7 +14304,16 @@
       "confirmation": {
         "dialog": {
           "8490e5d36a": "Подтвердить",
-          "56f5c60e0c": "Отмена"
+          "56f5c60e0c": "Отмена",
+          "92bac3217e": "Больше не спрашивать"
+        },
+        "skip": {
+          "saved": "В следующий раз подтверждение не появится.",
+          "savedDescription": "Изменить можно в настройках.",
+          "openSettings": "Открыть настройки",
+          "preference": {
+            "0b0cb6e3f9": "Не удалось сохранить настройку подтверждения."
+          }
         }
       },
       "jira": {
@@ -14405,7 +14589,7 @@
           "signout": {
             "confirm": {
               "title": "Выйти из Orca?",
-              "description": "Вы выйдете из Orca на этом устройстве. Локальные проекты и worktree не пострадают.",
+              "description": "Artifacts и Orca Relay станут недоступны, пока вы не войдёте снова. Локальные проекты и worktree не пострадают.",
               "cancel": "Отмена",
               "action": "Выйти"
             }
@@ -14589,6 +14773,104 @@
         "streamConnectionUnreachable": "Не удаётся связаться с удалённым сервером.",
         "streamRestartFailed": "Не удалось перезапустить трансляцию удалённого браузера.",
         "streamCapabilityUnsupported": "Выбранный runtime не поддерживает трансляцию удалённого браузера."
+      },
+      "artifacts": {
+        "ArtifactsPage": {
+          "signInAgain": "Войдите в Orca снова, чтобы загрузить artifact.",
+          "loadFailed": "Не удалось загрузить artifact.",
+          "deleteTitle": "Удалить artifact?",
+          "deleteDescription": "«{{name}}» перестанет открываться по публичной ссылке.",
+          "delete": "Удалить",
+          "deleteFailed": "Не удалось удалить artifact.",
+          "closeArtifacts": "Закрыть Artifacts",
+          "closeTooltip": "Закрыть · Esc",
+          "title": "Artifacts",
+          "refresh": "Обновить",
+          "signInHeading": "Войти в Orca",
+          "signInCopy": "Войдите, чтобы видеть artifact вашего аккаунта и управлять ими.",
+          "signingIn": "Вход…",
+          "signIn": "Войти в Orca",
+          "empty": "Нет опубликованных artifact",
+          "emptyCopy": "Откройте HTML- или Markdown-файл и выберите «Поделиться как artifact» — или попросите agent.",
+          "openArtifact": "Открыть artifact",
+          "deleteArtifact": "Удалить artifact",
+          "moreAvailable": "Есть ещё artifact",
+          "moreAvailableCopy": "Загрузите следующую страницу.",
+          "loadMoreFailed": "Не удалось загрузить ещё.",
+          "publishingOff": "Публикация выключена",
+          "publishingOffCopy": "На этом устройстве пока нельзя создать публичную ссылку. Разрешите публикацию в Настройки → Artifacts, затем поделитесь из открытого HTML- или Markdown-файла или попросите agent.",
+          "openArtifactsSettings": "Открыть Настройки → Artifacts",
+          "loadedCountMore": "Загружено {{count}} · есть ещё",
+          "loadedCount": "Опубликовано {{count}}",
+          "retry": "Повторить",
+          "reconnectHeading": "Войдите в Orca снова",
+          "reconnectCopy": "Войдите снова, чтобы видеть artifact вашего аккаунта и управлять ими.",
+          "signInAgainAction": "Войти снова",
+          "unconfiguredCopy": "Вход в аккаунт Orca на этом компьютере ещё не настроен.",
+          "openAccountSettings": "Открыть настройки аккаунта"
+        },
+        "copySuccess": "Ссылка на artifact скопирована",
+        "copyFailed": "Не удалось скопировать ссылку",
+        "copyLink": "Скопировать ссылку",
+        "openInBrowser": "Открыть в браузере",
+        "preview": "Просмотр artifact",
+        "previewUnavailable": "Просмотр недоступен",
+        "previewUnavailableDescription": "Откройте этот artifact в браузере, чтобы посмотреть.",
+        "actions": "Действия с artifact",
+        "ArtifactCollection": {
+          "loadMore": "Загрузить ещё"
+        },
+        "ArtifactDetailHeader": {
+          "publicLink": "Ссылку может открыть любой, у кого она есть"
+        },
+        "ArtifactListPane": {
+          "search": "Поиск по artifact",
+          "listLabel": "Опубликованные artifact",
+          "noMatches": "Ничего не найдено"
+        },
+        "updatedAt": "Обновлено {{when}}",
+        "updatedRecently": "недавно",
+        "expiryUnknown": "Срок неизвестен",
+        "expired": "Срок ссылки истёк",
+        "expires": "Ссылка истекает {{when}}",
+        "ArtifactPublishButton": {
+          "a4a49da6af": "Поделиться как artifact",
+          "confirmTitle": "Поделиться как artifact",
+          "confirmDescription": "Текущий файл будет опубликован по ссылке, открытой всем, у кого есть URL.",
+          "accountTitle": "Аккаунт Orca",
+          "accountDescription": "Войдите, чтобы создать ссылку и управлять ею.",
+          "signingIn": "Вход…",
+          "signInAgain": "Войти снова",
+          "signIn": "Войти",
+          "publishingOffTitle": "Публикация artifact выключена",
+          "publishingOffDescription": "Узнайте о публичных ссылках и включите публикацию в настройках.",
+          "openSettings": "Открыть настройки Artifacts",
+          "sharing": "Публикация…",
+          "sharePublicLink": "Опубликовать ссылку",
+          "publishedDescription": "Файл сможет посмотреть любой, у кого есть эта ссылка.",
+          "checkingLink": "Проверка существующей ссылки…",
+          "checkFailed": "Не удалось проверить существующую ссылку.",
+          "tryAgain": "Повторить"
+        },
+        "artifact-publish-flow": {
+          "9a078a0c65": "Публикация artifact недоступна",
+          "bba20daa6d": "Войдите в Orca и повторите.",
+          "54b1805328": "Не удалось опубликовать artifact",
+          "430019efd0": "Artifact опубликован",
+          "2fc727c831": "Artifact обновлён",
+          "5cb4f5ec36": "Скопировать ссылку",
+          "fbb5018602": "Файл пустой.",
+          "6112db5a1c": "Artifact из Orca должен быть меньше 800 КБ.",
+          "e2ed5acd8c": "Orca не смогла прочитать файл. Откройте его из workspace и повторите.",
+          "6d475e9b25": "Публиковать как artifact можно только локальные HTML- и Markdown-файлы.",
+          "29a406be09": "Artifact должен содержать текст."
+        },
+        "ArtifactPublishedLinkPanel": {
+          "copyLink": "Скопировать ссылку",
+          "openLink": "Открыть ссылку",
+          "updating": "Обновление…",
+          "update": "Обновить опубликованное"
+        }
       }
     },
     "i18n": {
